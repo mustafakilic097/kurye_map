@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "395922043868",
+    "project_id": "kurye-map-55598",
+    "storage_bucket": "kurye-map-55598.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395922043868:android:1103dbdb9f0fb1f3af9519",
+        "android_client_info": {
+          "package_name": "com.kuryemap.kurye_map"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395922043868-fg0vvukb3fas412m4kneft5ls5eq0q7f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kuryemap.kurye_map",
+            "certificate_hash": "a6cad398365a2b097907d96862b1a6b20e4e0277"
+          }
+        },
+        {
+          "client_id": "395922043868-b1o3rk4tt802hat6clr9h9jq3adpm4kc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtBWcabwJQzapLcz686u71b_DjPwSCkrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "395922043868-b1o3rk4tt802hat6clr9h9jq3adpm4kc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
