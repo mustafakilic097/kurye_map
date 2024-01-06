@@ -8,6 +8,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:kurye_map/core/constants/enum/kurye_arac_enum.dart';
+import 'package:kurye_map/core/extension/latlng/location_info_mixin.dart';
 import 'package:kurye_map/view/map/kurye_mapscreen.dart';
 import 'package:kurye_map/core/model/bildirim.dart';
 import 'package:kurye_map/core/model/person/kurye.dart';
@@ -19,7 +20,6 @@ import 'package:kurye_map/core/viewmodel/talep_view_model.dart';
 import 'package:kurye_map/view/settings/kurye_settings_screen.dart';
 import 'package:kurye_map/view/auth/login_screen.dart';
 import 'package:kurye_map/view/request/talep_screen.dart';
-import 'package:kurye_map/core/components/info_location.dart';
 import 'package:kurye_map/core/components/mesafe_hesapla.dart';
 import '../../core/model/map/distance_model.dart';
 import '../../core/viewmodel/distance_view_model.dart';
@@ -36,7 +36,7 @@ class KuryeScreen extends ConsumerStatefulWidget {
   }
 }
 
-class KuryeScreenState extends ConsumerState<KuryeScreen> {
+class KuryeScreenState extends ConsumerState<KuryeScreen> with GetLocationInfo {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   late Kurye kurye;
   bool kuryeAktifmi = false;

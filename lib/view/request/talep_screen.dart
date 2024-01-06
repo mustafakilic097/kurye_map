@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:kurye_map/core/extension/latlng/location_info_mixin.dart';
 import 'package:kurye_map/core/viewmodel/talep_view_model.dart';
 
 import '../../core/components/easyloading/easy_loading.dart';
@@ -14,7 +15,6 @@ import '../../core/model/person/kurye.dart';
 import '../../core/model/talep.dart';
 import '../../core/viewmodel/bildirim_view_model.dart';
 import '../../core/viewmodel/kurye_view_model.dart';
-import '../../core/components/info_location.dart';
 
 class TalepScreen extends ConsumerStatefulWidget {
   final String rol;
@@ -26,7 +26,7 @@ class TalepScreen extends ConsumerStatefulWidget {
   ConsumerState<TalepScreen> createState() => _TalepScreenState();
 }
 
-class _TalepScreenState extends ConsumerState<TalepScreen> {
+class _TalepScreenState extends ConsumerState<TalepScreen> with GetLocationInfo{
   int talepSayisi = 0;
 
   @override

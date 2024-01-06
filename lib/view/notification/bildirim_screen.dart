@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:kurye_map/core/constants/enum/kurye_arac_enum.dart';
+import 'package:kurye_map/core/extension/latlng/location_info_mixin.dart';
 import 'package:kurye_map/core/viewmodel/bildirim_view_model.dart';
 
 import '../../core/components/easyloading/easy_loading.dart';
@@ -13,7 +14,6 @@ import '../../core/model/person/kurye.dart';
 import '../../core/model/talep.dart';
 import '../../core/viewmodel/kurye_view_model.dart';
 import '../../core/viewmodel/talep_view_model.dart';
-import '../../core/components/info_location.dart';
 import '../../core/components/mesafe_hesapla.dart';
 
 class BildirimScreen extends ConsumerStatefulWidget {
@@ -26,7 +26,7 @@ class BildirimScreen extends ConsumerStatefulWidget {
   ConsumerState<BildirimScreen> createState() => _BildirimScreenState();
 }
 
-class _BildirimScreenState extends ConsumerState<BildirimScreen> {
+class _BildirimScreenState extends ConsumerState<BildirimScreen> with GetLocationInfo{
   int bildirimSayisi = 0;
 
   @override

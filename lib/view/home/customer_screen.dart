@@ -95,7 +95,7 @@ class _CustomerScreenState extends BaseState<CustomerScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            buildYakinKurye,
+            buildYakinKuryeHeader,
             const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -163,7 +163,7 @@ class _CustomerScreenState extends BaseState<CustomerScreen> {
         ),
       );
 
-  Widget get buildYakinKurye => Row(
+  Widget get buildYakinKuryeHeader => Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -260,7 +260,6 @@ class _CustomerScreenState extends BaseState<CustomerScreen> {
         ],
       );
 
-  // Burada bulunan bazı appbar gibi kısımlar bir homescreen tarafından gelmeli burası customer screen olacak sadece
   // bu kısmın çoğu sunucu tarafında çözümlenecek. Ondan dolayı burasının sadece kod mantığında düzenlemeler yapmak yetecektir.
   Future<void> get musteriTalepGonder async {
     await ref.read(customerViewModelProvider).getCustomer().then((Customer c) async {
@@ -277,7 +276,8 @@ class _CustomerScreenState extends BaseState<CustomerScreen> {
                   alignment: Alignment.centerRight,
                   child: ElevatedButton(
                       onPressed: () async {
-                        await Navigator.of(context).push(MaterialPageRoute(builder: (context) => const LocationFormScreen()));
+                        await Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (context) => const LocationFormScreen()));
                       },
                       child: const Text("Konum Ekle")),
                 )
